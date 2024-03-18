@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Schedule for Sayar Tin's Hardcore Fans (WDF-10)">
+    <meta name="author" content="Sayar Tin's Disciple Thu Ta Ye Yint">
+
+    <title>Schedule For Sayar Tin's Hardcore Fans(WDF-10)</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+   
+    <style type="text/css">
+        body {
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+        }
+
+        .container {
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .schedule {
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .schedule-text {
+            display: none;
+
+        }
+
+        #classTime .schedule-text {
+            display: block; 
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn-group {
+            margin-left: 20%;
+        }        
+
+        ul {
+            list-style-type: none;
+        }
+
+        .btn {
+            margin: 15px;
+            padding: 10px 15px;
+            transition: transform 3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        #classTime {
+            text-align: center;
+            margin-top: 30px;
+            margin-left: 25%;
+
+            width: 400px;
+            height: 300px;
+            background-color: tan;
+
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+
+            overflow-wrap: break-word;
+            white-space: pre-line;
+            
+            background-image: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            margin: 0 auto;
+
+            transition: opacity 3s ease-in-out;
+        }
+
+        #classTime.show{
+            opacity: 1;
+        }
+
+        #classTime ul {
+            padding-left: 0;
+        }
+
+        #classTime ul li {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="margin-bottom: 25px;">
+            <button type="button" class="btn btn-primary" id="btnMonday"><i class="fas fa-rocket"></i> Monday</button>
+            <button type="button" class="btn btn-info" id="btnTuesday"><i class="fas fa-tasks"></i> Tuesday</button>
+            <button type="button" class="btn btn-success" id="btnWednesday"><i class="fas fa-sun"></i> Wednesday</button>
+            <button type="button" class="btn btn-secondary" id="btnThursday"><i class="fas fa-briefcase"></i> Thursday</button>
+            <button type="button" class="btn btn-dark" id="btnFriday"><i class="fas fa-coffee"></i> Friday</button>
+            <button type="button" class="btn btn-warning" id="btnSaturday"><i class="fas fa-laptop-code"></i> Saturday</button>
+            <button type="button" class="btn btn-danger" id="btnSunday"><i class="fas fa-bed"></i> Sunday</button>
+        </div>
+        <div id="classTime"></div>
+    </div>  
+
+    <div class="schedule" id="scheduleMonday">
+        <ul>
+            <li class="schedule-text">7:30 pm - 9:15 pm (jQuery)</li>
+            <li class="schedule-text">9:40 pm - 11:00 pm (PHP)</li>
+        </ul>
+    </div>
+
+    <div class="schedule" id="scheduleTuesday">
+        <ul>
+            <li class="schedule-text">7:30 pm - 9:15 pm (jQuery)</li>
+            <li class="schedule-text">9:40 pm - 11:00 pm (PHP)</li>
+        </ul>
+    </div>
+
+    <div class="schedule" id="scheduleWednesday">
+        <ul>
+            <li class="schedule-text">7:30 pm - 9:15 pm (jQuery)</li>
+            <li class="schedule-text">9:40 pm - 11:00 pm (Linux)</li>
+        </ul>
+    </div>
+
+    <div class="schedule" id="scheduleThursday">
+        <ul>
+            <li class="schedule-text">7:30 pm - 9:15 pm (jQuery)</li>
+            
+        </ul>
+    </div>
+
+    <div class="schedule" id="scheduleFriday">
+        <ul>
+            <li class="schedule-text">8:00 pm - 9:30 pm (JS Small App)</li>           
+        </ul>
+    </div>
+
+    <div class="schedule" id="scheduleSaturday">
+        <ul>
+            <li class="schedule-text">8:30 pm - 10:00 pm (CSS Intermediate)</li>
+            
+        </ul>
+    </div>
+
+    <div class="schedule" id="scheduleSunday">
+        <ul>
+            <h5 class="schedule-text">No Class Today.
+                
+                Revise the lessons you learnt this week.
+                
+                Recharge your mind and body.
+                
+                Get Ready for the next week.</h5>          
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        $('#btnMonday').click(function() {
+            $('.schedule').hide(); 
+            $('#scheduleMonday').show();
+            $('#classTime').html($('#scheduleMonday').html()).addClass('show'); 
+        });
+
+        $('#btnTuesday').click(function() {
+            $('.schedule').hide(); 
+            $('#scheduleTuesday').show();
+            $('#classTime').html($('#scheduleTuesday').html()).addClass('show'); 
+        });
+
+        $('#btnWednesday').click(function() {
+            $('.schedule').hide(); 
+            $('#scheduleWednesday').show();
+            $('#classTime').html($('#scheduleWednesday').html()).addClass('show'); 
+        });
+
+        $('#btnThursday').click(function() {
+            $('.schedule').hide(); 
+            $('#scheduleThursday').show();
+            $('#classTime').html($('#scheduleThursday').html()).addClass('show'); 
+        });
+
+        $('#btnFriday').click(function() {
+            $('.schedule').hide(); 
+            $('#scheduleFriday').show();
+            $('#classTime').html($('#scheduleFriday').html()).addClass('show'); 
+        });
+
+        $('#btnSaturday').click(function() {
+            $('.schedule').hide(); 
+            $('#scheduleSaturday').show();
+            $('#classTime').html($('#scheduleSaturday').html()).addClass('show'); 
+        });
+
+        $('#btnSunday').click(function() {
+            $('.schedule').hide(); 
+            $('#scheduleSunday').show();
+            $('#classTime').html($('#scheduleSunday').html()).addClass('show'); 
+        });
+    </script> 
+    
+</body>
+</html>
